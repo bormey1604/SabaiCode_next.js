@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@300&family=Caveat&family=Fira+Sans:ital@1&family=Hanuman:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
+
+.container {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #334155;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: white;
+  position: fixed;
+  z-index: 11;
+}
+.ul {
+  display: flex;
+  list-style-type: none;
+}
+.ul a {
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 18px;
+  color: white;
+}
+.ul a:hover {
+  color: #64748b;
+}
