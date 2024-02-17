@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@300&family=Caveat&family=Fira+Sans:ital@1&family=Hanuman:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
+
+.Form {
+  width: 500px;
+  height: 580px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: auto;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+}
+.Form .div {
+  width: 80%;
+  /* height: 20%; */
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.Form .div .input {
+  width: 100%;
+  border: 1px solid black;
+  margin: auto;
+  padding: 10px;
+  background-color: #f4f4f5;
+}
+.button {
+  padding: 6px 17px;
+  color: white;
+  background-color: #334155;
+  margin-top: 30px;
+  font-size: 18px;
+  transition: all 0.4s;
+}
+.button:hover {
+  background-color: #f4f4f5;
+  border: 1px solid #334155;
+  color: black;
+}
+.button:active {
+  background-color: black;
+  color: white;
+}

@@ -1,16 +1,13 @@
 import classes from "./detail.module.css";
 import Link from "next/link";
 import { BsFillCartFill } from "react-icons/bs";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../../context";
 const Detail = (props) => {
   const { src, category, title, id, price, description, href } = props;
-  const [count, setCount] = useState(0);
-  const handleIncre = () => {
-    setCount(count + 1);
-  };
-  const handleDecre = () => {
-    setCount(count - 1);
-  };
+  const product = props;
+  const { addToCard, removeFromCart, cart, getCountQuantity } = useContext(CartContext);
+
   return (
     <div className={classes.container}>
       <div className={classes.img}>
@@ -31,11 +28,11 @@ const Detail = (props) => {
         </div>
         <div className={classes.cart_back}>
           <div className={classes.cart}>
-            <button onClick={handleDecre} className={classes.decre}>
+            <button onClick={() => removeFromCart(product)} className={classes.decre}>
               -
             </button>
-            <span className={classes.zero}>{count}</span>
-            <button onClick={handleIncre} className={classes.incre}>
+            <span className={classes.zero}>{getCountQuantity(product)}</span>
+            <button onClick={() => addToCard(product)} className={classes.incre}>
               +
             </button>
             <span>

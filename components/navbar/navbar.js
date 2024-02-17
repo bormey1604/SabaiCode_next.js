@@ -1,5 +1,6 @@
 import Link from "next/link";
 import classes from "./navbar.module.css";
+import { BsFillCartFill } from "react-icons/bs";
 
 const Navbar = () => {
   const arrays = [
@@ -7,6 +8,7 @@ const Navbar = () => {
     { id: 2, link: "/cart", name: "Cart" },
     { id: 3, link: "/aboutus", name: "About us" },
     { id: 4, link: "/contact", name: "Contact" },
+    { id: 5, link: "/signup", name: "Sign Up" },
   ];
   return (
     <>

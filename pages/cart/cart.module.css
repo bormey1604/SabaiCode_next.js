@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@300&family=Caveat&family=Fira+Sans:ital@1&family=Hanuman:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* background-color: #334155; */
+  border-top: 2px dashed #334155;
+  width: 75%;
+  margin: auto;
+}
+.checkout {
+  margin-bottom: 20px;
+  background-color: #334155;
+  font-size: 20px;
+  color: white;
+  padding: 20px 40px;
+}
+.checkout h1 span {
+  color: red;
+  font-size: 30px;
+  font-weight: 500;
+}
+.button {
+  padding: 6px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  /* color: white;
+  background-color: #334155; */
+  background-color: yellow;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.button:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+.button:active {
+  background-color: black;
+  color: white;
+}

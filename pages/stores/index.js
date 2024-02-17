@@ -30,6 +30,7 @@ const Stores = () => {
               price={item.price}
               title={item.title}
               productLink={`/stores/${item.id}`}
+              description={item.description}
             />
           </div>
         );

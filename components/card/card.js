@@ -3,15 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsFillCartFill } from "react-icons/bs";
 import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../../context";
 const Card = (props) => {
-  const { category, src, id, price, title, productLink } = props;
-  const [count, setCount] = useState(0);
-  const handleIncre = () => {
-    setCount(count + 1);
-  };
-  const handleDecre = () => {
-    setCount(count - 1);
-  };
+  const { category, src, id, price, title, productLink, description } = props;
+  const product = props;
+  const { addToCard, removeFromCart, cart, getCountQuantity } = useContext(CartContext);
+
   return (
     <div className={classes.container}>
       <div className={classes.category}>{category}</div>
@@ -28,11 +26,21 @@ const Card = (props) => {
           <Link href={`${productLink}`}>More Info</Link>
         </div>
         <div className={classes.cart}>
-          <span onClick={handleDecre} className={classes.minus}>
+          <span
+            className={classes.minus}
+            onClick={() => {
+              removeFromCart(product);
+            }}
+          >
             -
           </span>
-          <span className={classes.zero}>{count}</span>
-          <span onClick={handleIncre} className={classes.add}>
+          <span className={classes.zero}>{getCountQuantity(product)}</span>
+          <span
+            onClick={() => {
+              addToCard(product);
+            }}
+            className={classes.add}
+          >
             +
           </span>
           <span>
